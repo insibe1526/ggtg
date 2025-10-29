@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Demo PWA — Универсальный пример</title>
+
+  <!-- PWA manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- iOS-specific meta tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="DemoPWA">
+
+  <!-- iOS icon -->
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+  <meta name="theme-color" content="#2b6cb0">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="wrap">
+    <h1>Demo PWA</h1>
+
+    <section id="auth">
+      <h2>Вход</h2>
+      <input id="username" placeholder="Логин" autocomplete="username">
+      <input id="password" type="password" placeholder="Пароль" autocomplete="current-password">
+      <button id="loginBtn">Войти</button>
+      <p id="loginStatus"></p>
+    </section>
+
+    <section id="controls" hidden>
+      <h2>Управление</h2>
+      <button id="notifyBtn">Показать уведомление</button>
+      <button id="playSoundBtn">Воспроизвести звук</button>
+      <button id="vibrateBtn">Попытаться вибрировать</button>
+      <button id="logoutBtn">Выйти</button>
+      <p id="info" class="muted"></p>
+    </section>
+
+    <p id="installHint" class="muted">Чтобы установить: в браузере используйте «Установить» или в Safari — «Поделиться» → «На экран «Домой»».</p>
+  </main>
+
+  <audio id="ding" src="ding.wav" preload="auto"></audio>
+  <script src="app.js" defer></script>
+</body>
+</html>
